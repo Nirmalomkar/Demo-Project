@@ -1,4 +1,9 @@
 !#/bin/bash
-sudo apt update 
-sudo apt install nginx -y
-sudo systemctl start nginx
+sudo apt update
+sudo apt install apache2 -y
+sudo apt install unzip -y
+sudo wget https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip
+sudo rm -rf /var/www/html/*
+sudo unzip oxer.zip
+sudo mv oxer-html/* /var/www/html/ 
+sudo systemctl start apache2
